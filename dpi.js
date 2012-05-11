@@ -26,29 +26,75 @@
 	 		 ['HTC_DesireZ', [800, 480, 252]],
 	 		 ['HTC_Wildfire', [320, 240, 125]]
 		]
-		var phone = null;
+
+		var phoneDPI = null;
+
 		function detectPhone()
 		{
 			var i = 0;
+			var x = screen.width;
+			var y = screen.height;
+
+			if (x < y)
+			{
+				var t = x;
+				x = y;
+				y = t;
+			}
 			while (i < data.length)
 			{
 				var patt=new RegExp(data[i][0],'i');
 				if (navigator.userAgent.match(patt))
 				{
-
+					var j = 0;
+					while (j < data[i][1].length)
+					{
+						if (data[i][1][j][0] == x && data[i][1][j][1] == y)
+						{
+							phoneDPI = data[i][1][j][2]
+							return;
+						}
+						++j;
+					}
 				}
 				++i;
 			}
+			phoneDPI = 96;
 		}
 
-		window.getMmFromPixel = function(pixels)
+		function getMmFromPixel(pixels)
 		{
-
+			if (!phoneDPI)
+				detectPhone();
+			return (pixels / phoneDPI) / 0.393700787 | 0;
 		}
 
-		window.getPixelFromMm = function(mm)
+		function getPixelFromMm(mm)
 		{
+			if (!phoneDPI)
+				detectPhone();
+			return mm * 0.393700787 * phoneDPI | 0;
+		}
 
+		function getInchFromPixel(pixels)
+		{
+			if (!phoneDPI)
+				detectPhone();
+			return (pixels / phoneDPI) | 0;
+		}
+
+		function getPixelFromInch(inch)
+		{
+			if (!phoneDPI)
+				detectPhone();
+			return inch  * phoneDPI | 0;
+		}
+
+		function getDPI()
+		{
+			if (!phoneDPI)
+				detectPhone();
+			return phoneDPI;
 		}
 	}
-)(window, navigator, document
+)(window, navigator, document)
