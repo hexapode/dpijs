@@ -9,11 +9,22 @@
 	{
 
 		var data = [
-			
 			 ['iPhone', 
 				// iPhone EDGE / iPhone 3G / iPhone 3GS
 			 	[480, 320, 163],
 			 	// iPhone 4 / iPhone 4S
+			 	[960, 640, 326]
+			 ],
+			 ['iPad', 
+				// iPad 1 / iPad 2
+			 	[1024, 768, 132],
+			 	// iPad 3
+			 	[2048 , 1536 , 264]
+			 ],
+ 				['iPod', 
+				// iPodTouch 1 / 2/ 3
+			 	[480, 320, 163],
+			 	// iPodTouch 4
 			 	[960, 640, 326]
 			 ],
 			 // HTC
