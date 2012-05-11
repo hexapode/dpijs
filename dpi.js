@@ -1,5 +1,7 @@
 /**
 ** DPI JS
+** By Pierre-Loic Doulcet (@hexapode)
+** 
 **/
 
 (
@@ -68,6 +70,7 @@
 				detectPhone();
 			return (pixels / phoneDPI) / 0.393700787 | 0;
 		}
+		document.getMmFromPixel = getMmFromPixel;
 
 		function getPixelFromMm(mm)
 		{
@@ -75,6 +78,7 @@
 				detectPhone();
 			return mm * 0.393700787 * phoneDPI | 0;
 		}
+		document.getPixelFromMm = getPixelFromMm;
 
 		function getInchFromPixel(pixels)
 		{
@@ -82,6 +86,7 @@
 				detectPhone();
 			return (pixels / phoneDPI) | 0;
 		}
+		document.getInchFromPixel = getInchFromPixel;
 
 		function getPixelFromInch(inch)
 		{
@@ -89,6 +94,7 @@
 				detectPhone();
 			return inch  * phoneDPI | 0;
 		}
+		document.getPixelFromInch = getPixelFromInch;
 
 		function getDPI()
 		{
@@ -96,5 +102,6 @@
 				detectPhone();
 			return phoneDPI;
 		}
+		document.getDPI = getDPI;
 	}
-)(window, navigator, document)
+)(window, navigator, document);
