@@ -31,11 +31,19 @@ List of supported Mobile Phones :
 ====
 
 #[Apple]
-  - Iphone EDGE       : 163 DPI
+  - iphone EDGE       : 163 DPI
   - iPhone 3G         : 163 DPI
   - iPhone 3GS        : 163 DPI
   - iPhone 4          : 326 DPI
   - iPhone 4S         : 326 DPI
+  - iPad 1            : 132 DPI
+  - iPad 2            : 132 DPI
+  - iPad 3            : 264 DPI
+  - iPod Touch 1      : 163 DPI
+  - iPod Touch 2      : 163 DPI
+  - iPod Touch 3      : 163 DPI
+  - iPod Touch 4      : 326 DPI
+
 
 #[HTC]
   - HTC Sensation     : 256 DPI
