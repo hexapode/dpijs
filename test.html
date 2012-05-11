@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<style>
+			#dpi {
+  height: 1in;
+  left: -100%;
+  position: absolute;
+  top: -100%;
+  width: 1in;
+}
+
+		</style>
+	</head>
+	<body>
+		<div id='data'>
+		</div>
+		<div id="dpi"></div>
+		<script>
+			document.getElementById('data').innerHTML = 
+			navigator.userAgent + '<br/>' + document.body.offsetWidth
+			 + '<br/>' 
+			 + document.body.offsetHeight 
+			 +'<br/>'
+			 + document.getElementById("dpi").offsetHeight;
+		</script>
+	</body>
+</html>
