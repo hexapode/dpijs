@@ -26,16 +26,18 @@ Get a Pixel distance from a Inch Distance:
 getInchFromPixel(PixelDistance);
 
 
-====
+
 List of supported Mobile Phones :
-[Apple]
+====
+
+#[Apple]
   - Iphone EDGE       : 163 DPI
   - iPhone 3G         : 163 DPI
   - iPhone 3GS        : 163 DPI
   - iPhone 4          : 326 DPI
   - iPhone 4S         : 326 DPI
 
-[HTC]
+#[HTC]
   - HTC Sensation     : 256 DPI
   - HTC Incredible    : 252 DPI
   - HTC Vision        : 252 DPI
