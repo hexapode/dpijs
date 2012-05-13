@@ -81,7 +81,7 @@
 				detectPhone();
 			return (pixels / phoneDPI) / 0.393700787 | 0;
 		}
-		document.getMmFromPixel = getMmFromPixel;
+		window.getMmFromPixel = getMmFromPixel;
 
 		function getPixelFromMm(mm)
 		{
@@ -89,7 +89,7 @@
 				detectPhone();
 			return mm * 0.393700787 * phoneDPI | 0;
 		}
-		document.getPixelFromMm = getPixelFromMm;
+		window.getPixelFromMm = getPixelFromMm;
 
 		function getInchFromPixel(pixels)
 		{
@@ -97,7 +97,7 @@
 				detectPhone();
 			return (pixels / phoneDPI) | 0;
 		}
-		document.getInchFromPixel = getInchFromPixel;
+		window.getInchFromPixel = getInchFromPixel;
 
 		function getPixelFromInch(inch)
 		{
@@ -105,7 +105,7 @@
 				detectPhone();
 			return inch  * phoneDPI | 0;
 		}
-		document.getPixelFromInch = getPixelFromInch;
+		window.getPixelFromInch = getPixelFromInch;
 
 		function getDPI()
 		{
@@ -113,6 +113,6 @@
 				detectPhone();
 			return phoneDPI;
 		}
-		document.getDPI = getDPI;
+		window.getDPI = getDPI;
 	}
 )(window, navigator, document);
