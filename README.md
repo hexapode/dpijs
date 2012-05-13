@@ -13,18 +13,6 @@ Usage :
 Get your mobile browser DPI using :
 getDPI();
 
-Get a Milimeter distance in Pixel :
-getPixelFromMm(millimeterDistance);
-
-Get a Pixel distance from a Milimeter Distance:
-getMmFromPixel(PixelDistance);
-
-Get a Inch distance in Pixel :
-getPixelFromInch(InchDistance);
-
-Get a Pixel distance from a Inch Distance:
-getInchFromPixel(PixelDistance);
-
 
 
 List of supported Mobile Phones :
